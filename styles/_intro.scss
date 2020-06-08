@@ -12,10 +12,131 @@ nav{
     .logo{
         @include  flex(flex-start, center, row);
         flex: 1 1 10rem;
+
+        img{
+            height: 4rem;
+        }
+        
+        h1{
+            margin: 2rem;
+        }
     }
 
     ul{
         @include flex(space-around, center, row);
-        flex: 1 1 10rem;
+        flex: 1 1 50rem;
     }
+}
+
+.intro{
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    @include flex(space-between, center, row);
+
+    h2{
+        font-size: 8rem;
+        padding-top: 2rem;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
+
+    h3{
+        font-size: 6rem;
+        padding: 2rem 0rem;
+    }
+
+    p{
+        padding-top: 2rem;
+        color: $gray-text;
+    }
+}
+
+.intro-social{
+    margin-top: 4rem;
+    
+    a{
+        margin-right: 3rem;
+    }
+}
+
+.bg-shape{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+    height: 100%;
+}
+
+.active{
+    background: $gray-text;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+.intro-text, 
+.intro-images{
+    flex: 1 1 50rem;
+}
+
+.intro-images svg{
+    width: 100%;
+    height: auto;
+}
+
+//Animations
+#sqr1,
+#sqr2,
+#sqr3{
+    animation: sqr 1.2s ease-out infinite alternate;
+}
+
+#sqr2{
+    animation-delay: .22s;
+}
+
+#sqr3{
+    animation-delay: .44s;
+}
+
+#shd1,
+#shd2,
+#shd3{
+    animation: sqr 1.2s ease-out infinite alternate;
+}
+
+#shd2{
+    animation-delay: .22s;
+}
+
+#shd3{
+    animation-delay: .44s;
+}
+
+#lft-arrow,
+#rig-arrow{
+    animation: arrow 5.5s ease infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#rig-arrow{
+    animation-delay: .5s;
+}
+
+#bl-flwr{
+    animation: bl-flwr 2s ease infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+#gr-flwr{
+    animation: gr-flwr 2s ease infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
 }

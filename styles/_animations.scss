@@ -1,0 +1,53 @@
+@keyframes load{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes sqr{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-5%);
+    }
+}
+
+@keyframes shd{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(5%);
+    }
+}
+
+@keyframes arrow{
+    from{
+        transform: rotate(7deg);
+    }
+    to{
+        transform: rotate(-7deg);
+    }
+}
+
+@keyframes bl-flwr{
+    from{
+        transform: rotate(7deg);
+    }
+    to{
+        transform: rotate(-7deg);
+    }
+}
+
+@keyframes gr-flwr{
+    from{
+        transform: rotate(12deg);
+    }
+    to{
+        transform: rotate(-12deg);
+    }
+}
