@@ -16,8 +16,117 @@ $gray-text: #2c2c2c;
 
 body{
     animation: load 2s ease-in-out;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 @import "global";
 @import "intro";
 @import "animations";
+@import "project";
+
+
+//Media queries
+@media screen and (max-width: 1334px){
+    .intro{
+        h2{
+            font-size: 6rem;
+        }
+    
+        h3{
+            font-size: 4rem;
+        }
+    }
+    
+    .intro-social{
+        margin-top: 3rem;
+        
+        a{
+            margin-right: 2rem;
+        }
+    }
+
+    .intro-images svg{
+        width: 80%;
+    }
+
+    .intro-text, 
+    .intro-images{
+        flex: 1 1 40rem;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .intro-social{
+        margin-top: 3rem;
+        
+        a{
+            margin-right: 2rem;
+        }
+
+        img{
+            width: 3rem;
+        }
+    }
+
+    .intro-images svg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 890px){
+    html{
+        font-size: 45%;
+    }
+
+    .main-head{
+        width: 100%;
+    }
+
+    nav{
+        margin: auto;
+
+        .logo{
+            padding: 1rem;
+            @include flex(center,center,column);
+        }
+
+        ul{
+            width: 100%;
+            @include flex(space-between,center,row);
+            margin: 2rem 0rem;
+        }
+    }
+
+    .intro{
+        padding-top: 1.5rem;
+    }
+
+    .intro-text{
+        text-align: center;
+    }
+
+    .bg-shape{
+        opacity: .25;
+    }
+
+    .intro-images svg{
+        height: 60%;
+    }
+
+    .intro-social{
+        margin-top: 3rem;
+        
+        a{
+            margin-right: 2rem;
+        }
+
+        img{
+            width: 5rem;
+        }
+    }
+
+    .active{
+        padding: .5rem 1.5rem;
+        border-radius: 1rem;
+    }
+}
